@@ -183,10 +183,13 @@ body {
     display: flex;
 }
 .column__icons-item {
+    display: block;
     width: 32px;
     height: 32px;
+    line-height: 32px;
     background: center no-repeat var(--neutral-color-100);
-    background-image: var(--bg-icon-image);
+    color: var(--neutral-color-300);
+    text-align: center;
 }
 .column__icons-item + .column__icons-item {
     margin-left: 12px;
