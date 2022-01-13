@@ -8,113 +8,109 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>fusely</title>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="content">
-            <div class="content__navbar navbar">
-                <div class="container">
-                    <div class="navbar__row">
-                        <div class="navbar__logo">
-                            <a href="/"><img src="img/logo.png" alt="fusely logo"></a>
-                        </div>
-                        <nav class="navbar__nav nav">
-                            <div class="nav__row">
-                                <a href="#" class="nav__item nav__item_active">Home</a>
-                                <a href="#" class="nav__item">Features</a>
-                                <a href="#" class="nav__item">Pricing</a>
-                                <a href="#" class="nav__item">Blog</a>
-                                <a href="#" class="nav__item">Contact</a>
-                            </div>
-                        </nav>
-                        <div class="navbar__login login">
-                            <div class="login__row">
-                                <a href="#" class="login__button button">Log in</a>
-                                <a href="#" class="login__button button button_filled">Get Started</a>
-                            </div>
-                        </div>
+    <div class="content">
+        <div class="navbar">
+            <div class="container">
+                <div class="navbar__row">
+                    <div class="navbar__logo">
+                        <a href="/"><img src="assets/img/logo.svg" alt="fusely logo"></a>
                     </div>
-                </div>
-            </div>
-            <div class="content__hero hero">
-                <div class="container">
-                    <div class="hero__row">
-                        <div class="hero__body">
-                            <div class="hero__title">Let’s get fusely together</div>
-                            <div class="hero__text">Outcome-centered product that reduce churn, optimize pricing, and grow your subscription business end-to-end.</div>
-                            <a href="#" class="hero__button button button_filled">Get Started</a>
+                    <nav class="navbar__nav">
+                        <div class="navbar__nav-row">
+                            <a href="#" class="navbar__nav-item navbar__nav-item_active">Home</a>
+                            <a href="#" class="navbar__nav-item">Features</a>
+                            <a href="#" class="navbar__nav-item">Pricing</a>
+                            <a href="#" class="navbar__nav-item">Blog</a>
+                            <a href="#" class="navbar__nav-item">Contact</a>
                         </div>
-                        <div class="hero__image">
-                            <img src="img/hero-img.png" alt="Let's get fusely">
+                    </nav>
+                    <div class="navbar__login">
+                        <div class="navbar__login-row">
+                            <button class="navbar__login-button button">Log in</button>
+                            <button class="navbar__login-button button button_filled">Get Started</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <footer class="footer">
-            <div class="footer__menu-bottom menu-bottom">
-                <div class="container">
-                    <div class="menu-bottom__row">
-                        <div class="menu-bottom__column column">
-                            <div class="column__title">Product</div>
-                            <div class="column__list">
-                                <ul>
-                                    <li><a href="#">How it works</a></li>
-                                    <li><a href="#">Features</a></li>
-                                    <li><a href="#">Pricing</a></li>
-                                    <li><a href="#">FAQ</a></li>
-                                    <li><a href="#">Download</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="menu-bottom__column column">
-                            <div class="column__title">Company</div>
-                            <div class="column__list">
-                                <ul>
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#">Blog</a></li>
-                                    <li><a href="#">Partnership</a></li>
-                                    <li><a href="#">Terms of use</a></li>
-                                    <li><a href="#">Privacy policy</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="menu-bottom__column column">
-                            <div class="column__title">Support</div>
-                            <div class="column__list">
-                                <ul>
-                                    <li><a href="#">Help center</a></li>
-                                    <li><a href="#">Contact us</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="menu-bottom__column column">
-                            <div class="column__title">Get in touch</div>
-                            <div class="column__icons sm-icons">
-                                <div class="sm-icon__row">
-                                    <a href="#" class="sm-icons__icon sm-icons__icon_fb"></a>
-                                    <a href="#" class="sm-icons__icon sm-icons__icon_twitter"></a>
-                                    <a href="#" class="sm-icons__icon sm-icons__icon_linkedin"></a>
-                                </div>
-                            </div>
-                        </div>
+        <div class="hero">
+            <div class="container">
+                <div class="hero__row">
+                    <div class="hero__body">
+                        <div class="hero__title">Let’s get fusely together</div>
+                        <div class="hero__text">Outcome-centered product that reduce churn, optimize pricing, and grow your subscription business end-to-end.</div>
+                        <a href="#" class="hero__button button button_filled">Get Started</a>
+                    </div>
+                    <div class="hero__image">
+                        <img src="assets/img/hero-img.png" alt="Let's get fusely">
                     </div>
                 </div>
             </div>
-            <div class="footer__info info">
-                <div class="container">
-                    <div class="info__row">
-                        <div class="info__logo">
-                            <a href="/"><img src="img/logo-small.png" alt=""></a>
-                        </div>
-                        <div class="info__copyright">© Fusely 2022. All rights reserved.</div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
+        </div>
     </div>
+    <footer class="footer">
+        <div class="footer__menu">
+            <div class="container">
+                <div class="footer__menu-row">
+                    <div class="footer__menu-column column">
+                        <div class="column__title">Product</div>
+                        <div class="column__list">
+                            <ul>
+                                <li><a href="#">How it works</a></li>
+                                <li><a href="#">Features</a></li>
+                                <li><a href="#">Pricing</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Download</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__menu-column column">
+                        <div class="column__title">Company</div>
+                        <div class="column__list">
+                            <ul>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Partnership</a></li>
+                                <li><a href="#">Terms of use</a></li>
+                                <li><a href="#">Privacy policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__menu-column column">
+                        <div class="column__title">Support</div>
+                        <div class="column__list">
+                            <ul>
+                                <li><a href="#">Help center</a></li>
+                                <li><a href="#">Contact us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__menu-column column">
+                        <div class="column__title">Get in touch</div>
+                        <div class="column__icons-row">
+                            <a href="#" style="--bg-icon-image: url('/assets/icons/fb.png');" class="column__icons-item"></a>
+                            <a href="#" style="--bg-icon-image: url('/assets/icons/twitter.png');" class="column__icons-item"></a>
+                            <a href="#" style="--bg-icon-image: url('/assets/icons/linkedin.png');" class="column__icons-item"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__info">
+            <div class="container">
+                <div class="footer__info-row">
+                    <div class="footer__info-logo">
+                        <a href="/"><img src="assets/img/logo.svg" alt=""></a>
+                    </div>
+                    <div class="footer__info-copyright">© Fusely 2022. All rights reserved.</div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
