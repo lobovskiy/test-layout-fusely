@@ -29,6 +29,10 @@ body {
     flex-direction: column;
 }
 
+/* smooth scroll (only Firefox) */
+html {scroll-behavior: smooth;}
+/* ---------------------------- */
+
 .container {
     max-width: 1280px;
     margin: 0 auto;
@@ -190,6 +194,9 @@ body {
     background: center no-repeat var(--neutral-color-100);
     color: var(--neutral-color-300);
     text-align: center;
+}
+.column__icons-item:hover {
+    color: var(--primary-color-400);
 }
 .column__icons-item + .column__icons-item {
     margin-left: 12px;
