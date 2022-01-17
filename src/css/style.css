@@ -1,3 +1,10 @@
+@import '../font/fontello/css/fontello-codes.css';
+@import '../font/fontello/css/animation.css';
+@import '../font/fontello/css/fontello-embedded.css';
+@import '../font/fontello/css/fontello-ie7-codes.css';
+@import '../font/fontello/css/fontello-ie7.css';
+@import '../font/fontello/css/fontello.css';
+
 *{padding:0;margin:0;border:0;}
 a, a:visited{text-decoration:none;}
 ul li{list-style: none;}

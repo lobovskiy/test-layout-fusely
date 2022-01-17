@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/lobovskiy/test-layout-fusely#readme",
   "devDependencies": {
+    "copy-webpack-plugin": "^10.2.0",
     "css-loader": "^6.5.1",
+    "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.4.7",
     "style-loader": "^3.3.1",
