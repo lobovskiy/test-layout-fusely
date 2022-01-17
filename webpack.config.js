@@ -74,6 +74,14 @@ module.exports = {
         }
       },
       {
+        test: /\.s[ca]ss$/,
+        use: [
+        MiniCssExtractPlugin.loader,
+          { loader: 'css-loader', options: { sourceMap: false } },
+          'sass-loader',
+        ]
+    },
+      {
         test: /\.css$/i,
         use: [
           MiniCssExtractPlugin.loader,
@@ -84,14 +92,14 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'assets/img/[hash].[ext]'
+          filename: 'assets/img/[hash][ext]'
         }
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'assets/font/[hash].[ext]'
+          filename: 'assets/font/[hash][ext]'
         }
       },
     ],

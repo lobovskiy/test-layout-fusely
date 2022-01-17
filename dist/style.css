@@ -1,5 +1,5 @@
 /*!************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/font/fontello/css/fontello-codes.css ***!
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./src/font/fontello/css/fontello-codes.css ***!
   \************************************************************************************************************************/
 
 .icon-twitter:before { content: '\f099'; } /* '' */
@@ -7,7 +7,7 @@
 .icon-linkedin:before { content: '\f0e1'; } /* '' */
 
 /*!*******************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/font/fontello/css/animation.css ***!
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./src/font/fontello/css/animation.css ***!
   \*******************************************************************************************************************/
 /*
    Animation example, for spinners
@@ -96,13 +96,13 @@
 }
 
 /*!***************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/font/fontello/css/fontello-embedded.css ***!
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./src/font/fontello/css/fontello-embedded.css ***!
   \***************************************************************************************************************************/
 @font-face {
   font-family: 'fontello';
-  src: url(assets/font/7e26f71c4ea71a681ded..eot);
-  src: url(assets/font/7e26f71c4ea71a681ded..eot#iefix) format('embedded-opentype'),
-       url(assets/img/df68431d856fb54bda96..svg#fontello) format('svg');
+  src: url(assets/font/7e26f71c4ea71a681ded.eot);
+  src: url(assets/font/7e26f71c4ea71a681ded.eot#iefix) format('embedded-opentype'),
+       url(assets/img/df68431d856fb54bda96.svg#fontello) format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -162,7 +162,7 @@
 .icon-linkedin:before { content: '\f0e1'; } /* '' */
 
 /*!****************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/font/fontello/css/fontello-ie7-codes.css ***!
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./src/font/fontello/css/fontello-ie7-codes.css ***!
   \****************************************************************************************************************************/
 
 .icon-twitter { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf099;&nbsp;'); }
@@ -170,7 +170,7 @@
 .icon-linkedin { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf0e1;&nbsp;'); }
 
 /*!**********************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/font/fontello/css/fontello-ie7.css ***!
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./src/font/fontello/css/fontello-ie7.css ***!
   \**********************************************************************************************************************/
 [class^="icon-"], [class*=" icon-"] {
   font-family: 'fontello';
@@ -189,16 +189,16 @@
 .icon-linkedin { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf0e1;&nbsp;'); }
 
 /*!******************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/font/fontello/css/fontello.css ***!
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./src/font/fontello/css/fontello.css ***!
   \******************************************************************************************************************/
 @font-face {
   font-family: 'fontello';
-  src: url(assets/font/7e26f71c4ea71a681ded..eot);
-  src: url(assets/font/7e26f71c4ea71a681ded..eot#iefix) format('embedded-opentype'),
-       url(assets/font/7326eb7c2e65f0c8dd06..woff2) format('woff2'),
-       url(assets/font/c643438ef4c29933b0ff..woff) format('woff'),
-       url(assets/font/7bd0e52570da76526642..ttf) format('truetype'),
-       url(assets/img/df68431d856fb54bda96..svg#fontello) format('svg');
+  src: url(assets/font/7e26f71c4ea71a681ded.eot);
+  src: url(assets/font/7e26f71c4ea71a681ded.eot#iefix) format('embedded-opentype'),
+       url(assets/font/7326eb7c2e65f0c8dd06.woff2) format('woff2'),
+       url(assets/font/c643438ef4c29933b0ff.woff) format('woff'),
+       url(assets/font/7bd0e52570da76526642.ttf) format('truetype'),
+       url(assets/img/df68431d856fb54bda96.svg#fontello) format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -252,7 +252,7 @@
 .icon-linkedin:before { content: '\f0e1'; } /* '' */
 
 /*!*************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/css/style.css ***!
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./src/css/style.css ***!
   \*************************************************************************************************/
 *{padding:0;margin:0;border:0;}
 a, a:visited{text-decoration:none;}

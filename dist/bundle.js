@@ -80,7 +80,7 @@ __webpack_require__.r(__webpack_exports__);
   \*************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "assets/img/6a301b99f9e5fafc9cf8..png";
+module.exports = __webpack_require__.p + "assets/img/6a301b99f9e5fafc9cf8.png";
 
 /***/ }),
 
@@ -90,7 +90,7 @@ module.exports = __webpack_require__.p + "assets/img/6a301b99f9e5fafc9cf8..png";
   \*********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "assets/img/8218e3cf67fb4074e496..svg";
+module.exports = __webpack_require__.p + "assets/img/8218e3cf67fb4074e496.svg";
 
 /***/ })
 
