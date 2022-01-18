@@ -1,5 +1,5 @@
 /*!************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./src/font/fontello/css/fontello-codes.css ***!
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/font/fontello/css/fontello-codes.css ***!
   \************************************************************************************************************************/
 
 .icon-twitter:before { content: '\f099'; } /* '' */
@@ -7,7 +7,7 @@
 .icon-linkedin:before { content: '\f0e1'; } /* '' */
 
 /*!*******************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./src/font/fontello/css/animation.css ***!
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/font/fontello/css/animation.css ***!
   \*******************************************************************************************************************/
 /*
    Animation example, for spinners
@@ -96,7 +96,7 @@
 }
 
 /*!***************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./src/font/fontello/css/fontello-embedded.css ***!
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/font/fontello/css/fontello-embedded.css ***!
   \***************************************************************************************************************************/
 @font-face {
   font-family: 'fontello';
@@ -162,7 +162,7 @@
 .icon-linkedin:before { content: '\f0e1'; } /* '' */
 
 /*!****************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./src/font/fontello/css/fontello-ie7-codes.css ***!
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/font/fontello/css/fontello-ie7-codes.css ***!
   \****************************************************************************************************************************/
 
 .icon-twitter { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf099;&nbsp;'); }
@@ -170,7 +170,7 @@
 .icon-linkedin { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf0e1;&nbsp;'); }
 
 /*!**********************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./src/font/fontello/css/fontello-ie7.css ***!
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/font/fontello/css/fontello-ie7.css ***!
   \**********************************************************************************************************************/
 [class^="icon-"], [class*=" icon-"] {
   font-family: 'fontello';
@@ -189,7 +189,7 @@
 .icon-linkedin { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf0e1;&nbsp;'); }
 
 /*!******************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./src/font/fontello/css/fontello.css ***!
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/font/fontello/css/fontello.css ***!
   \******************************************************************************************************************/
 @font-face {
   font-family: 'fontello';
@@ -251,228 +251,220 @@
 .icon-facebook:before { content: '\f09a'; } /* '' */
 .icon-linkedin:before { content: '\f0e1'; } /* '' */
 
-/*!*************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./src/css/style.css ***!
-  \*************************************************************************************************/
-*{padding:0;margin:0;border:0;}
-a, a:visited{text-decoration:none;}
-ul li{list-style: none;}
+/*!*****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/css/style.scss ***!
+  \*****************************************************************************************************************************************/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
 
-:root {
-    --primary-color-500: #5952D1;
-    --primary-color-400: #6C63FF;
-    --primary-color-300: #9E99FF;
-    --primary-color-200: #C5C2FF;
-    --primary-color-100: #ECEBFF;
-    
-    --secondary-color-500: #FC4A6E;
-    --secondary-color-400: #FD6584;
-    --secondary-color-300: #FD9BAE;
-    --secondary-color-200: #FED7DF;
-    --secondary-color-100: #FEEBEF;
-    
-    --neutral-color-500: #2F2E41;
-    --neutral-color-400: #717082;
-    --neutral-color-300: #9893A3;
-    --neutral-color-200: #CFCFDE;
-    --neutral-color-100: #FFFFFF;
+a, a:visited {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
+  font-family: "Open Sans", sans-serif;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* smooth scroll (only Firefox) */
-html {scroll-behavior: smooth;}
-/* ---------------------------- */
+html {
+  scroll-behavior: smooth;
+}
 
+/* ---------------------------- */
 .container {
-    max-width: 1280px;
-    margin: 0 auto;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .content {
-    flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 .button {
-    flex: 0 0 auto;
-    padding: 16px 30px;
-    border: 1px solid var(--primary-color-400);
-    border-radius: 2px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 700;
-    background-color: var(--neutral-color-100);
-    color: var(--primary-color-400);
+  flex: 0 0 auto;
+  padding: 16px 30px;
+  border: 1px solid #6C63FF;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #FFFFFF;
+  color: #6C63FF;
 }
-.button_filled, .button:hover {
-    color: var(--neutral-color-100);
-    background-color: var(--primary-color-400);
+.button:hover {
+  color: #FFFFFF;
+  background-color: #6C63FF;
+}
+.button_filled {
+  color: #FFFFFF;
+  background-color: #6C63FF;
 }
 .button_filled:hover {
-    color: var(--primary-color-400);
-    background: none;
+  color: #6C63FF;
+  background: none;
 }
 
 .navbar {
-    padding: 40px 0;
+  padding: 40px 0;
 }
 .navbar__row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
 .navbar__logo {
-    flex: 0 0 80px;
+  flex: 0 0 80px;
 }
 .navbar__logo img {
-    max-width: 100%;
+  max-width: 100%;
 }
-
 .navbar__nav-row {
-    display: flex;
-    margin: 0 16px;
+  display: flex;
+  margin: 0 16px;
 }
 .navbar__nav-item {
-    flex: 0 0 auto;
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--neutral-color-300);
-    padding: 0 0 10px 0;
-    position: relative;
-}
-.navbar__nav-item + .navbar__nav-item {
-    margin-left: 36px;
+  flex: 0 0 auto;
+  font-size: 16px;
+  font-weight: 700;
+  color: #9893A3;
+  padding: 0 0 10px 0;
+  position: relative;
 }
 .navbar__nav-item_active, .navbar__nav-item:hover {
-    color: var(--neutral-color-500);
+  color: #2F2E41;
 }
 .navbar__nav-item_active::after, .navbar__nav-item:hover::after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    content:'';
-    width: 100%;
-    height: 4px;
-    background-color: var(--primary-color-300);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: #9E99FF;
 }
-
+.navbar__nav-item + .navbar__nav-item {
+  margin-left: 36px;
+}
 .navbar__login-row {
-    display: flex;
+  display: flex;
 }
 .navbar__login-button + .navbar__login-button {
-    margin-left: 16px;
+  margin-left: 16px;
 }
 
 .hero__row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 50px;
 }
 .hero__body {
-    text-align: left;
+  text-align: left;
 }
 .hero__title {
-    font-family: Playfair Display;
-    font-size: 86px;
-    font-weight: 700;
-    line-height: 88px;
-    letter-spacing: -1px;
-    margin-bottom: 30px;
+  font-family: Playfair Display;
+  font-size: 86px;
+  font-weight: 700;
+  line-height: 88px;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
 }
 .hero__text {
-    font-size: 20px;
-    line-height: 34px;
-    color: var(--neutral-color-300);
-    margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 34px;
+  color: #9893A3;
+  margin-bottom: 30px;
 }
 .hero__button {
-    display: inline-block;
+  display: inline-block;
 }
 .hero__image {
-    flex: 0 0 642px;
-    margin-left: 49px;
+  flex: 0 0 642px;
+  margin-left: 49px;
 }
 .hero__image img {
-    width: 100%;
+  width: 100%;
 }
 
 .footer {
-    background-color: var(--primary-color-100);
+  background-color: #ECEBFF;
 }
-
 .footer__menu {
-    padding: 40px 0;
-    margin: 205px 0 0;
+  padding: 40px 0;
+  margin: 205px 0 0;
 }
 .footer__menu-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    margin: 0 190px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin: 0 190px;
 }
 .footer__menu-column {
-    flex: 0 1 25%;
+  flex: 0 1 25%;
 }
 .footer__menu-column + .footer__menu-column {
-    margin-left: 16px;
+  margin-left: 16px;
 }
-.column__title {
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-.column__list li {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 26px;
-    margin-bottom: 8px;
-    color: var(--neutral-color-400);
-}
-.column__list a {
-    color: inherit;
-}
-.column__icons-row {
-    display: flex;
-}
-.column__icons-item {
-    display: block;
-    width: 32px;
-    height: 32px;
-    line-height: 32px;
-    background: center no-repeat var(--neutral-color-100);
-    color: var(--neutral-color-300);
-    text-align: center;
-}
-.column__icons-item:hover {
-    color: var(--primary-color-400);
-}
-.column__icons-item + .column__icons-item {
-    margin-left: 12px;
-}
-
 .footer__info {
-    padding: 40px 0;
+  padding: 40px 0;
 }
 .footer__info-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .footer__info-logo {
-    flex: 0 0 60px;
+  flex: 0 0 60px;
 }
 .footer__info-logo img {
-    max-width: 100%;
+  max-width: 100%;
 }
 .footer__info-copyright {
-    color: var(--neutral-color-300);
-    font-size: 12px;
+  color: #9893A3;
+  font-size: 12px;
+}
+
+.column__title {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.column__list li {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-bottom: 8px;
+  color: #717082;
+}
+.column__list a {
+  color: inherit;
+}
+.column__icons-row {
+  display: flex;
+}
+.column__icons-item {
+  display: block;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  background: center no-repeat #FFFFFF;
+  color: #9893A3;
+  text-align: center;
+}
+.column__icons-item:hover {
+  color: #6C63FF;
+}
+.column__icons-item + .column__icons-item {
+  margin-left: 12px;
 }

@@ -1,0 +1,296 @@
+@import '../font/fontello/css/fontello-codes.css';
+@import '../font/fontello/css/animation.css';
+@import '../font/fontello/css/fontello-embedded.css';
+@import '../font/fontello/css/fontello-ie7-codes.css';
+@import '../font/fontello/css/fontello-ie7.css';
+@import '../font/fontello/css/fontello.css';
+
+*{padding:0;margin:0;border:0;}
+a, a:visited{text-decoration:none;}
+ul li{list-style: none;}
+
+$fusely-color-key: '400' !default;
+
+$fusely-colors: (
+    'primary': (
+        '500': #5952D1,
+        '400': #6C63FF,
+        '300': #9E99FF,
+        '200': #C5C2FF,
+        '100': #ECEBFF
+    ),
+    'secondary': (
+        '500': #FC4A6E,
+        '400': #FD6584,
+        '300': #FD9BAE,
+        '200': #FED7DF,
+        '100': #FEEBEF
+    ),
+    'neutral': (
+        '500': #2F2E41,
+        '400': #717082,
+        '300': #9893A3,
+        '200': #CFCFDE,
+        '100': #FFFFFF
+    )
+);
+
+@function fusely-color(
+    $name: 'primary',
+    $variant: $fusely-color-key
+) {
+    $color: null;
+
+    // Get the color spectrum
+    $color-spectrum: map-get($fusely-colors, $name);
+
+    // Get the color variant
+    @if $color-spectrum {
+        $color: map-get($color-spectrum, $variant);
+    }
+
+    @return $color;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* smooth scroll (only Firefox) */
+html {scroll-behavior: smooth;}
+/* ---------------------------- */
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.content {
+    flex: 1 1 auto;
+}
+
+.button {
+    flex: 0 0 auto;
+    padding: 16px 30px;
+    border: 1px solid fusely-color();
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: fusely-color('neutral', '100');
+    color: fusely-color();
+
+    &:hover {
+        color: fusely-color('neutral', '100');
+        background-color: fusely-color();
+    }
+
+    &_filled{
+        color: fusely-color('neutral', '100');
+        background-color: fusely-color();
+        &:hover {
+            color: fusely-color();
+            background: none;
+        }
+    }
+}
+
+.navbar {
+    padding: 40px 0;
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        flex: 0 0 80px;
+
+        & img {
+            max-width: 100%;
+        }
+    }
+
+    &__nav-row {
+        display: flex;
+        margin: 0 16px;
+    }
+
+    &__nav-item {
+        flex: 0 0 auto;
+        font-size: 16px;
+        font-weight: 700;
+        color: fusely-color('neutral', '300');
+        padding: 0 0 10px 0;
+        position: relative;
+
+        &_active, &:hover {
+            color: fusely-color('neutral', '500');
+
+            &::after {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                content:'';
+                width: 100%;
+                height: 4px;
+                background-color: fusely-color('primary', '300');
+            }
+        }
+    }
+
+    &__nav-item + &__nav-item {
+        margin-left: 36px;
+    }
+
+    &__login-row {
+        display: flex;
+    }
+
+    &__login-button + &__login-button {
+        margin-left: 16px;
+    }
+}
+
+.hero {
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 50px;
+    }
+
+    &__body {
+        text-align: left;
+    }
+
+    &__title {
+        font-family: Playfair Display;
+        font-size: 86px;
+        font-weight: 700;
+        line-height: 88px;
+        letter-spacing: -1px;
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        font-size: 20px;
+        line-height: 34px;
+        color: fusely-color('neutral', '300');
+        margin-bottom: 30px;
+    }
+
+    &__button {
+        display: inline-block;
+    }
+
+    &__image {
+        flex: 0 0 642px;
+        margin-left: 49px;
+
+        & img {
+            width: 100%;
+        }
+    }
+}
+
+.footer {
+    background-color: fusely-color('primary', '100');
+
+    &__menu {
+        padding: 40px 0;
+        margin: 205px 0 0;
+
+        &-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin: 0 190px;
+        }
+    
+        &-column {
+            flex: 0 1 25%;
+        }
+    
+        &-column + &-column {
+            margin-left: 16px;
+        }
+    }
+
+    &__info {
+        padding: 40px 0;
+
+        &-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &-logo {
+            flex: 0 0 60px;
+
+            & img {
+                max-width: 100%;
+            }
+        }
+
+        &-copyright {
+            color: fusely-color('neutral', '300');
+            font-size: 12px;
+        }
+    }
+
+}
+
+.column {
+    &__title {
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    &__list {
+        & li {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 26px;
+            margin-bottom: 8px;
+            color: fusely-color('neutral');
+        }
+
+        & a {
+            color: inherit;
+        }
+    }
+
+    &__icons {
+        &-row {
+            display: flex;
+        }
+
+        &-item {
+            display: block;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            background: center no-repeat fusely-color('neutral', '100');
+            color: fusely-color('neutral', '300');
+            text-align: center;
+
+            &:hover {
+                color: fusely-color();
+            }
+        }
+
+        &-item + &-item {
+            margin-left: 12px;
+        }
+    }
+
+
+}
