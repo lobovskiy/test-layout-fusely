@@ -27,6 +27,7 @@ ul li{list-style: none;}
     --neutral-color-300: #9893A3;
     --neutral-color-200: #CFCFDE;
     --neutral-color-100: #FFFFFF;
+    --neutral-color-000: #000000;
 }
 
 body {
