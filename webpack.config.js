@@ -3,6 +3,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const Handlebars = require("handlebars");
 
 module.exports = {
   mode: 'development',
@@ -17,52 +18,25 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.html/,
-        use: [
-          
-          {
-            loader: 'html-loader',
-            options: {
-              sources: {
-                list: [
-                  {
-                    tag: "img",
-                    attribute: "src",
-                    type: "src",
-                  },
-                  {
-                    // Tag name
-                    tag: "link",
-                    // Attribute name
-                    attribute: "href",
-                    // Type of processing, can be `src` or `scrset`
-                    type: "src",
-                    // Allow to filter some attributes
-                    filter: (tag, attribute, attributes, resourcePath) => {
-                      // The `tag` argument contains a name of the HTML tag.
-                      // The `attribute` argument contains a name of the HTML attribute.
-                      // The `attributes` argument contains all attributes of the tag.
-                      // The `resourcePath` argument contains a path to the loaded HTML file.
+        test: /\.hbs$/i,
+        loader: "html-loader",
+        options: {
+          preprocessor: (content, loaderContext) => {
+            let result;
 
-                      if (!/stylesheet/i.test(attributes.rel)) {
-                        return false;
-                      }
+            try {
+              result = Handlebars.compile(content)({
+                htmlTitle: "fusely template title"
+              });
+            } catch (error) {
+              loaderContext.emitError(error);
 
-                      if (
-                        attributes.type &&
-                        attributes.type.trim().toLowerCase() !== "text/css"
-                      ) {
-                        return false;
-                      }
-
-                      return true;
-                    },
-                  },
-                ]
-              }
+              return content;
             }
-          }
-        ]
+
+            return result;
+          },
+        },
       },
       {
         test: /\.s[ca]ss$/,
@@ -71,7 +45,7 @@ module.exports = {
           { loader: 'css-loader', options: { sourceMap: false } },
           'sass-loader',
         ]
-    },
+      },
       {
         test: /\.css$/i,
         use: [
@@ -103,7 +77,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'fusely template',
       favicon: './src/favicon.png',
-      template: './src/index.html',
+      template: './src/index.hbs',
       filename: 'index.html',
     }),
     new CleanWebpackPlugin(),
