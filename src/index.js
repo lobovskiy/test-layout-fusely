@@ -1,2 +1,2 @@
-import './index.html';
+import './index.hbs';
 import './css/style.scss';

@@ -31,6 +31,7 @@
     "webpack-cli": "^4.9.1"
   },
   "dependencies": {
+    "handlebars": "^4.7.7",
     "underscore-template-loader": "^1.1.0"
   }
 }
