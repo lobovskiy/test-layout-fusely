@@ -18,7 +18,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.hbs$/i,
+        test: /\.html$/i,
         loader: "html-loader",
         options: {
           preprocessor: (content, loaderContext) => {
@@ -77,7 +77,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'fusely template',
       favicon: './src/favicon.png',
-      template: './src/index.hbs',
+      template: './src/index.html',
       filename: 'index.html',
     }),
     new CleanWebpackPlugin(),

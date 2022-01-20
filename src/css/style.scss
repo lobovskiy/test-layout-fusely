@@ -82,21 +82,19 @@ html {scroll-behavior: smooth;}
 /* ---------------------------- */
 
 .container {
-    &-large {
+    position: relative;
+    margin: 0 auto;
+    
+    &_large {
         max-width: 1280px;
     }
 
-    &-medium {
+    &_medium {
         max-width: 1180px;
     }
 
-    &-small {
+    &_small {
         max-width: 900px;
-    }
-
-    &-large, &-medium, &-small {
-        position: relative;
-        margin: 0 auto;
     }
 }
 
@@ -115,6 +113,8 @@ html {scroll-behavior: smooth;}
 .title {
     font-family: Playfair Display;
     font-weight: 700;
+    font-size: 60px;
+    line-height: 64px;
     letter-spacing: -1px;
 }
 
@@ -239,9 +239,12 @@ html {scroll-behavior: smooth;}
     }
 
     &__title {
+        margin-bottom: 30px;
+        font-family: Playfair Display;
+        font-weight: 700;
         font-size: 86px;
         line-height: 88px;
-        margin-bottom: 30px;
+        letter-spacing: -1px;
     }
 
     &__text {
@@ -312,8 +315,6 @@ html {scroll-behavior: smooth;}
 
     &__title {
         margin-bottom: 24px;
-        font-size: 60px;
-        line-height: 64px;
     }
 
     &__text {
@@ -329,8 +330,6 @@ html {scroll-behavior: smooth;}
     text-align: center;
 
     &__title {
-        font-size: 60px;
-        line-height: 64px;
         margin-bottom: 90px;
     }
 
@@ -413,11 +412,6 @@ html {scroll-behavior: smooth;}
             margin-bottom: 90px;
         }
     }
-
-    &__title {
-        font-size: 60px;
-        line-height: 64px;
-    }
 }
 
 .article-snippet {
@@ -473,10 +467,11 @@ html {scroll-behavior: smooth;}
     
         &-title {
             flex: 0 1 346px;
+            font-family: Playfair Display;
+            font-weight: 700;
             margin-right: 20px;
             font-size: 50px;
             line-height: 56px;
-            letter-spacing: 0px;
             color: fusely-color('neutral', '100');
         }
     }
