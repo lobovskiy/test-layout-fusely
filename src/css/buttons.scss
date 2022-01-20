@@ -1,0 +1,49 @@
+.button {
+	flex: 0 0 auto;
+	display: inline-block;
+	padding: 16px 30px;
+	border: 1px solid fusely-color();
+	border-radius: 2px;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 700;
+
+	&_white {
+			background-color: fusely-color('neutral', '100');
+			color: fusely-color();
+
+			&:hover {
+					background-color: fusely-color();
+					color: fusely-color('neutral', '100');
+			}
+	}
+
+	&_colored {
+			background-color: fusely-color();
+			color: fusely-color('neutral', '100');
+
+			&:hover {
+					background: none;
+					color: fusely-color();
+			}
+	}
+}
+
+.button-more {
+	display: block;
+	position: relative;
+	width: 100px;
+	height: 12px;
+	border-bottom: 10px solid fusely-color('primary', '200', $opacity: 0.5);
+	cursor: pointer;
+	text-align: center;
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: 600;
+	letter-spacing: -1px;
+	color: fusely-color('neutral', '500');
+
+	&:hover {
+			border-bottom-color: fusely-color('primary', '200');
+	}
+}
