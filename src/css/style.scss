@@ -95,12 +95,21 @@ html {scroll-behavior: smooth;}
     }
 
     &-large, &-medium, &-small {
+        position: relative;
         margin: 0 auto;
     }
 }
 
 .content {
     flex: 1 1 auto;
+
+    &__flex-column {
+        flex: 0 0 363px;
+    
+        & + & {
+            margin-left: 20px;
+        }
+    }
 }
 
 .title {
@@ -330,14 +339,6 @@ html {scroll-behavior: smooth;}
         justify-content: space-between;
         align-items: center;
     }
-
-    &__plan-card {
-        flex: 0 1 33.33%;
-
-        & + & {
-            margin-left: 45px;
-        }
-    }
 }
 
 .plan-card {
@@ -402,12 +403,91 @@ html {scroll-behavior: smooth;}
     }
 }
 
+.blog {
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-bottom: 90px;
+        }
+    }
+
+    &__title {
+        font-size: 60px;
+        line-height: 64px;
+    }
+}
+
+.article-snippet {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+
+    &__image {
+        margin-bottom: 26px;
+
+        & img {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        margin-bottom: 6px;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 30px;
+        letter-spacing: -1px;
+    }
+
+    &__text {
+        margin-bottom: 26px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        color: fusely-color('neutral', '300');
+    }
+}
+
+.contact {
+    margin: 220px 0 calc(296px / 2 + 220px);
+
+    &__block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        padding: 84px;
+        height: calc(296px - 84px * 2);
+        border-radius: 2px;
+        background-color: fusely-color('neutral', '500');
+
+        &-row {
+            flex: 0 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        &-title {
+            flex: 0 1 346px;
+            margin-right: 20px;
+            font-size: 50px;
+            line-height: 56px;
+            letter-spacing: 0px;
+            color: fusely-color('neutral', '100');
+        }
+    }
+}
+
 .footer {
     background-color: fusely-color('primary', '100');
+    padding-top: calc(96px + 296px / 2);
 
     &__menu {
         padding: 40px 0;
-        margin: 205px 0 0;
 
         &-row {
             display: flex;
@@ -416,7 +496,7 @@ html {scroll-behavior: smooth;}
         }
     
         &-column {
-            flex: 0 1 25%;
+            flex: 0 1 auto;
 
             & + & {
                 margin-left: 16px;
