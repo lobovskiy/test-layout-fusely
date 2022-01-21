@@ -1,0 +1,29 @@
+.fus-article-snippet {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+
+    &__image {
+        margin-bottom: 26px;
+
+        & img {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        margin-bottom: 6px;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 30px;
+        letter-spacing: -1px;
+    }
+
+    &__text {
+        margin-bottom: 26px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        color: fusely-color('neutral', '300');
+    }
+}

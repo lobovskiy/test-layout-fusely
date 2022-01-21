@@ -1,0 +1,67 @@
+.fus-button {
+	flex: 0 0 auto;
+	display: inline-block;
+	padding: 16px 30px;
+	border: 1px solid transparent;
+	border-radius: 2px;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 700;
+
+	&_primary {
+		background-color: fusely-color();
+		border-color: fusely-color();
+		color: fusely-color('neutral', '100');
+
+		&:hover {
+			background-color: fusely-color('primary', '500');
+			border-color: fusely-color('primary', '500');
+		}
+	}
+
+	&_light {
+		background-color: fusely-color('neutral', '100');
+		border-color: fusely-color('neutral', '100');
+		color: fusely-color();
+
+		&:hover {
+			background-color: fusely-color('neutral', '200');
+			border-color: fusely-color('neutral', '200');
+		}
+	}
+
+	&-outline {
+		background: none;
+		border-color: fusely-color('neutral', '200');
+
+		&_primary {
+			background: none;
+			border-color: fusely-color();
+			color: fusely-color();
+	
+			&:hover {
+				background-color: fusely-color();
+				color: fusely-color('neutral', '100');
+			}
+		}
+	}
+
+	&-underline {
+		display: block;
+		position: relative;
+		width: 100px;
+		height: 12px;
+		border-bottom: 10px solid fusely-color('primary', '200', $opacity: 0.5);
+		cursor: pointer;
+		text-align: center;
+		font-size: 18px;
+		line-height: 20px;
+		font-weight: 600;
+		letter-spacing: -1px;
+		color: fusely-color('neutral', '500');
+	
+		&:hover {
+			border-bottom-color: fusely-color('primary', '200');
+		}
+	}
+}
