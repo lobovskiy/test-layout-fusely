@@ -2,6 +2,7 @@
 	flex: 0 0 auto;
 	display: inline-block;
 	padding: 16px 30px;
+	border: 1px solid transparent;
 	border-radius: 2px;
 	cursor: pointer;
 	font-size: 14px;
@@ -9,33 +10,39 @@
 
 	&_primary {
 		background-color: fusely-color();
+		border-color: fusely-color();
 		color: fusely-color('neutral', '100');
 
 		&:hover {
+			background-color: fusely-color('primary', '500');
+			border-color: fusely-color('primary', '500');
+		}
+	}
+
+	&_light {
+		background-color: fusely-color('neutral', '100');
+		border-color: fusely-color('neutral', '100');
+		color: fusely-color();
+
+		&:hover {
+			background-color: fusely-color('neutral', '200');
+			border-color: fusely-color('neutral', '200');
+		}
+	}
+
+	&-outline {
+		background: none;
+		border-color: fusely-color('neutral', '200');
+
+		&_primary {
 			background: none;
-			border: 1px solid fusely-color();
+			border-color: fusely-color();
 			color: fusely-color();
-		}
-	}
-
-	&_outlined {
-		background-color: fusely-color('neutral', '100');
-		border: 1px solid fusely-color();
-		color: fusely-color();
-
-		&:hover {
-			background-color: fusely-color();
-			color: fusely-color('neutral', '100');
-		}
-	}
-
-	&_white {
-		background-color: fusely-color('neutral', '100');
-		border: 1px solid fusely-color('neutral', '100');
-		color: fusely-color();
-
-		&:hover {
-			border: 1px solid fusely-color();
+	
+			&:hover {
+				background-color: fusely-color();
+				color: fusely-color('neutral', '100');
+			}
 		}
 	}
 }
