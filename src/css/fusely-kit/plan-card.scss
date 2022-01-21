@@ -1,4 +1,4 @@
-.plan-card {
+.fus-plan-card {
     $card: &;
     
     padding: 46px 0;
@@ -44,10 +44,10 @@
     }
 
     &__button {
-        &.button_light {
+        &.fus-button_light {
             display: none;
         }
-        &.button-outline_primary {
+        &.fus-button-outline_primary {
             display: initial;
         }
     }
@@ -73,10 +73,10 @@
             }
 
             &__button {
-                &.button_light {
+                &.fus-button_light {
                     display: initial;
                 }
-                &.button-outline_primary {
+                &.fus-button-outline_primary {
                     display: none;
                 }
             }
