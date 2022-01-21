@@ -2,30 +2,41 @@
 	flex: 0 0 auto;
 	display: inline-block;
 	padding: 16px 30px;
-	border: 1px solid fusely-color();
 	border-radius: 2px;
 	cursor: pointer;
 	font-size: 14px;
 	font-weight: 700;
 
-	&_white {
-			background-color: fusely-color('neutral', '100');
-			color: fusely-color();
+	&_primary {
+		background-color: fusely-color();
+		color: fusely-color('neutral', '100');
 
-			&:hover {
-					background-color: fusely-color();
-					color: fusely-color('neutral', '100');
-			}
+		&:hover {
+			background: none;
+			border: 1px solid fusely-color();
+			color: fusely-color();
+		}
 	}
 
-	&_colored {
+	&_outlined {
+		background-color: fusely-color('neutral', '100');
+		border: 1px solid fusely-color();
+		color: fusely-color();
+
+		&:hover {
 			background-color: fusely-color();
 			color: fusely-color('neutral', '100');
+		}
+	}
 
-			&:hover {
-					background: none;
-					color: fusely-color();
-			}
+	&_white {
+		background-color: fusely-color('neutral', '100');
+		border: 1px solid fusely-color('neutral', '100');
+		color: fusely-color();
+
+		&:hover {
+			border: 1px solid fusely-color();
+		}
 	}
 }
 

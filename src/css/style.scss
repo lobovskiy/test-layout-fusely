@@ -49,7 +49,8 @@ html {scroll-behavior: smooth;}
     flex: 1 1 auto;
 
     &__flex-column {
-        flex: 0 0 363px;
+        flex: 0 1 33%;
+        max-width: 363px;
     
         & + & {
             margin-left: 20px;
@@ -137,6 +138,7 @@ html {scroll-behavior: smooth;}
 
     &__body {
         text-align: left;
+        max-width: 45%;
     }
 
     &__title {
@@ -156,7 +158,8 @@ html {scroll-behavior: smooth;}
     }
 
     &__image {
-        flex: 0 0 642px;
+        flex: 0 1 auto;
+        max-width: 642px;
         margin-left: 20px;
 
         & img {
@@ -202,7 +205,8 @@ html {scroll-behavior: smooth;}
     }
 
     &__image {
-        flex: 0 0 600px;
+        flex: 0 1 auto;
+        max-width: 600px;
 
         & img {
             width: 100%;
@@ -280,6 +284,15 @@ html {scroll-behavior: smooth;}
         }
     }
 
+    &__button {
+        &.button_white {
+            display: none;
+        }
+        &.button_outlined {
+            display: inline-block;
+        }
+    }
+
     &_selected, &:hover {
         padding: 70px 0;
         background-color: fusely-color();
@@ -299,6 +312,15 @@ html {scroll-behavior: smooth;}
                     }
                 }
             }
+
+            &__button {
+                &.button_white {
+                    display: inline-block;
+                }
+                &.button_outlined {
+                    display: none;
+                }
+            }
         }
     }
 }
@@ -307,7 +329,7 @@ html {scroll-behavior: smooth;}
     &__row {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: start;
 
         &:not(:last-child) {
             margin-bottom: 90px;
