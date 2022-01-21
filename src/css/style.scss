@@ -5,66 +5,13 @@
 @import '../font/fontello/css/fontello-ie7.css';
 @import '../font/fontello/css/fontello.css';
 
+@import './colors.scss';
+@import './buttons.scss';
+
+
 *{padding:0;margin:0;border:0;}
 a, a:visited{text-decoration:none;}
 ul li{list-style: none;}
-
-$fusely-color-key: '400' !default;
-
-$fusely-colors: (
-    'primary': (
-        '500': #5952D1,
-        '400': #6C63FF,
-        '300': #9E99FF,
-        '200': #C5C2FF,
-        '100': #ECEBFF
-    ),
-    'secondary': (
-        '500': #FC4A6E,
-        '400': #FD6584,
-        '300': #FD9BAE,
-        '200': #FED7DF,
-        '100': #FEEBEF
-    ),
-    'neutral': (
-        '500': #2F2E41,
-        '400': #717082,
-        '300': #9893A3,
-        '200': #CFCFDE,
-        '100': #FFFFFF
-    )
-);
-
-$fusely-opacity: (
-    'light': 0.8, // opacity used with lighter colors
-    'dark': 0.4,  // opacity used with darker colors
-);
-
-@function fusely-color(
-    $name: 'primary',
-    $variant: $fusely-color-key,
-    $opacity: 1
-) {
-    $color: null;
-
-    // Get the color spectrum
-    $color-spectrum: map-get($fusely-colors, $name);
-
-    // Get the color variant
-    @if $color-spectrum {
-        $color: map-get($color-spectrum, $variant);
-    }
-
-    // Get the alpha setting
-    $alpha: if(type-of($opacity) == 'number', $opacity, map-get($scotch-opacity, $opacity));
-  
-    // Set the alpha of the color
-    @if $alpha {
-        $color: rgba($color, $alpha);
-    }
-
-    @return $color;
-}
 
 body {
     font-family: 'Open Sans', sans-serif;
@@ -102,7 +49,8 @@ html {scroll-behavior: smooth;}
     flex: 1 1 auto;
 
     &__flex-column {
-        flex: 0 0 363px;
+        flex: 0 1 33%;
+        max-width: 363px;
     
         & + & {
             margin-left: 20px;
@@ -116,52 +64,6 @@ html {scroll-behavior: smooth;}
     font-size: 60px;
     line-height: 64px;
     letter-spacing: -1px;
-}
-
-.button {
-    flex: 0 0 auto;
-    display: inline-block;
-    padding: 16px 30px;
-    border: 1px solid fusely-color();
-    border-radius: 2px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 700;
-    background-color: fusely-color('neutral', '100');
-    color: fusely-color();
-
-    &:hover {
-        color: fusely-color('neutral', '100');
-        background-color: fusely-color();
-    }
-
-    &_filled{
-        color: fusely-color('neutral', '100');
-        background-color: fusely-color();
-        &:hover {
-            color: fusely-color();
-            background: none;
-        }
-    }
-}
-
-.button-more {
-    display: block;
-    position: relative;
-    width: 100px;
-    height: 12px;
-    border-bottom: 10px solid fusely-color('primary', '200', $opacity: 0.5);
-    cursor: pointer;
-    text-align: center;
-    font-size: 18px;
-    line-height: 20px;
-    font-weight: 600;
-    letter-spacing: -1px;
-    color: fusely-color('neutral', '500');
-
-    &:hover {
-        border-bottom-color: fusely-color('primary', '200');
-    }
 }
 
 .navbar {
@@ -236,6 +138,7 @@ html {scroll-behavior: smooth;}
 
     &__body {
         text-align: left;
+        max-width: 45%;
     }
 
     &__title {
@@ -255,7 +158,8 @@ html {scroll-behavior: smooth;}
     }
 
     &__image {
-        flex: 0 0 642px;
+        flex: 0 1 auto;
+        max-width: 642px;
         margin-left: 20px;
 
         & img {
@@ -301,7 +205,8 @@ html {scroll-behavior: smooth;}
     }
 
     &__image {
-        flex: 0 0 600px;
+        flex: 0 1 auto;
+        max-width: 600px;
 
         & img {
             width: 100%;
@@ -379,6 +284,15 @@ html {scroll-behavior: smooth;}
         }
     }
 
+    &__button {
+        &.button_white {
+            display: none;
+        }
+        &.button_outlined {
+            display: inline-block;
+        }
+    }
+
     &_selected, &:hover {
         padding: 70px 0;
         background-color: fusely-color();
@@ -398,6 +312,15 @@ html {scroll-behavior: smooth;}
                     }
                 }
             }
+
+            &__button {
+                &.button_white {
+                    display: inline-block;
+                }
+                &.button_outlined {
+                    display: none;
+                }
+            }
         }
     }
 }
@@ -406,7 +329,7 @@ html {scroll-behavior: smooth;}
     &__row {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: start;
 
         &:not(:last-child) {
             margin-bottom: 90px;
@@ -543,6 +466,10 @@ html {scroll-behavior: smooth;}
 
         & a {
             color: inherit;
+
+            &:hover {
+                color: fusely-color();
+            }
         }
     }
 
