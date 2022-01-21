@@ -1,4 +1,6 @@
 .plan-card {
+    $card: &;
+    
     padding: 46px 0;
     font-size: 18px;
     font-weight: 400;
@@ -13,25 +15,29 @@
 
     &__price {
         margin-bottom: 30px;
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 56px;
+        letter-spacing: -2px;
         color: fusely-color('neutral', '500');
 
-        & span {
-            font-size: 50px;
-            font-weight: 700;
-            line-height: 56px;
-            letter-spacing: -2px;
+        &-period {
+            display: inline-block;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 26px;
         }
     }
 
     &__features {
         margin-bottom: 30px;
 
-        & li {
+        div {
             &:not(:last-child) {
                 margin-bottom: 14px;
             }
 
-            & span {
+            span {
                 color: fusely-color('neutral', '500');
             }
         }
@@ -42,7 +48,7 @@
             display: none;
         }
         &.button-outline_primary {
-            display: inline-block;
+            display: initial;
         }
     }
 
@@ -51,7 +57,7 @@
         background-color: fusely-color();
         color: fusely-color('neutral', '100');
 
-        .plan-card {
+        #{$card} {
             &__price {
                 color: fusely-color('neutral', '100');
             }
@@ -59,8 +65,8 @@
             &__features {
                 color: fusely-color('neutral', '100', $opacity: 0.8);
 
-                & li {
-                    & span {
+                div {
+                    span {
                         color: fusely-color('neutral', '100');
                     }
                 }
@@ -68,7 +74,7 @@
 
             &__button {
                 &.button_light {
-                    display: inline-block;
+                    display: initial;
                 }
                 &.button-outline_primary {
                     display: none;
