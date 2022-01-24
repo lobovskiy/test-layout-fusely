@@ -48,7 +48,7 @@
             display: none;
         }
         &.fus-button-outline_primary {
-            display: initial;
+            display: inline-block;
         }
     }
 
@@ -74,7 +74,7 @@
 
             &__button {
                 &.fus-button_light {
-                    display: initial;
+                    display: inline-block;
                 }
                 &.fus-button-outline_primary {
                     display: none;
