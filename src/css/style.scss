@@ -68,12 +68,27 @@ html {scroll-behavior: smooth;}
 }
 
 .navbar {
-    padding: 40px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+    }
 
     &__row {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 40px;
     }
 
     &__logo {
@@ -84,12 +99,73 @@ html {scroll-behavior: smooth;}
         }
     }
 
+    &__burger {
+        display: none;
+        cursor: pointer;
+
+        &::before, &::after, & span {
+            content: '';
+            background-color: fusely-color();
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            left: 0;
+        }
+
+        &::before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+
+        span {
+            top: 8px;
+        }
+
+        @media (max-width:991px) {
+            display: block;
+            position: relative;
+            width: 25px;
+            height: 19px;
+        }
+    }
+
+    &__login {
+        @media (max-width:991px) {
+            position: fixed;
+            top: 0;
+            /* ---------------- hidden for using JS ---------------- */
+            left: -100%;
+            /* ----------------------------------------------------- */
+            width: 100%;
+            height: 100%;
+            margin-top: 673px;
+        }
+    }
+
     &__login-row {
         display: flex;
+
+        @media (max-width:991px) {
+            justify-content: space-between;
+            padding: 0 40px;
+        }
+    }
+
+    &__login-button {
+        @media (max-width:991px) {
+            width: 50%;
+        }
     }
 
     &__login-button + &__login-button {
         margin-left: 16px;
+
+        @media (max-width:991px) {
+            margin-left: 20px;
+        }
     }
 }
 
@@ -97,6 +173,11 @@ html {scroll-behavior: smooth;}
     &__row {
         display: flex;
         margin: 0 16px;
+
+        @media (max-width:991px) {
+            flex-direction: column;
+            margin: 60px 40px 0;
+        }
     }
 
     &__item {
@@ -124,11 +205,32 @@ html {scroll-behavior: smooth;}
                 background-color: fusely-color('primary', '300');
             }
         }
+
+        @media (max-width:991px) {
+            display: inline-block;
+            margin: 0 auto;
+
+            & + & {
+                margin: 30px auto 0;
+            }
+        }
+    }
+
+    @media (max-width:991px) {
+        position: fixed;
+        top: 0;
+        /* ---------------- hidden for using JS ---------------- */
+        left: -100%;
+        /* ----------------------------------------------------- */
+        width: 100%;
+        height: 100%;
+        margin-top: 112px;
+        background-color: #fff;
     }
 }
 
 .hero {
-    margin-bottom: 120px;
+    margin: 200px 0 120px;
 
     &__row {
         display: flex;
@@ -149,6 +251,7 @@ html {scroll-behavior: smooth;}
         font-size: 86px;
         line-height: 88px;
         letter-spacing: -1px;
+        color: fusely-color('neutral', '500');;
     }
 
     &__text {
