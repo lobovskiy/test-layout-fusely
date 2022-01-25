@@ -9,6 +9,11 @@
     background-color: fusely-color('primary', '100', $opacity: 0.3);
     color: fusely-color('neutral', '400');
 
+    @media (max-width:991px) {
+        max-width: 100%;
+        width: 100%;
+    }
+
     &__title {
         margin-bottom: 30px;
     }
@@ -43,78 +48,22 @@
         }
     }
 
-    &__button {
-        &.fus-button_light {
-            display: none;
-        }
-        &.fus-button-outline_primary {
-            display: inline-block;
-        }
-    }
+    &_selected {
+        padding: 70px 0;
+        background-color: fusely-color();
+        color: fusely-color('neutral', '100');
 
-    @media (min-width:992px) {
-        &_selected, &:hover {
-            padding: 70px 0;
-            background-color: fusely-color();
-            color: fusely-color('neutral', '100');
-
-            #{$card} {
-                &__price {
-                    color: fusely-color('neutral', '100');
-                }
-
-                &__features {
-                    color: fusely-color('neutral', '100', $opacity: 0.8);
-
-                    div {
-                        span {
-                            color: fusely-color('neutral', '100');
-                        }
-                    }
-                }
-
-                &__button {
-                    &.fus-button_light {
-                        display: inline-block;
-                    }
-                    &.fus-button-outline_primary {
-                        display: none;
-                    }
-                }
+        #{$card} {
+            &__price {
+                color: fusely-color('neutral', '100');
             }
-        }
-    }
 
-    @media (max-width:991px) {
-        max-width: 100%;
-        width: 100%;
+            &__features {
+                color: fusely-color('neutral', '100', $opacity: 0.8);
 
-        &_selected {
-            padding: 70px 0;
-            background-color: fusely-color();
-            color: fusely-color('neutral', '100');
-
-            #{$card} {
-                &__price {
-                    color: fusely-color('neutral', '100');
-                }
-
-                &__features {
-                    color: fusely-color('neutral', '100', $opacity: 0.8);
-
-                    div {
-                        span {
-                            color: fusely-color('neutral', '100');
-                        }
-                    }
-                }
-
-                &__button {
-                    &.fus-button_light {
-                        display: inline-block;
-                    }
-                    &.fus-button-outline_primary {
-                        display: none;
+                div {
+                    span {
+                        color: fusely-color('neutral', '100');
                     }
                 }
             }
