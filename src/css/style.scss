@@ -32,12 +32,15 @@ html {scroll-behavior: smooth;}
 /* ---------------------------- */
 
 $small-container: null;
+$large-container: null;
 
 .container {
     position: relative;
     margin: 0 auto;
     
     &_large {
+        $large-container: & !global;
+
         max-width: 1280px;
     }
 
@@ -82,6 +85,10 @@ $small-container: null;
     top: 0;
     left: 0;
     z-index: 50;
+
+    #{$large-container} {
+        max-width: 1360px;
+    }
 
     &::before {
         content: '';
