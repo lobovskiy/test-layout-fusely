@@ -9,6 +9,11 @@
     background-color: fusely-color('primary', '100', $opacity: 0.3);
     color: fusely-color('neutral', '400');
 
+    @media (max-width:991px) {
+        max-width: 100%;
+        width: 100%;
+    }
+
     &__title {
         margin-bottom: 30px;
     }
@@ -43,16 +48,7 @@
         }
     }
 
-    &__button {
-        &.fus-button_light {
-            display: none;
-        }
-        &.fus-button-outline_primary {
-            display: initial;
-        }
-    }
-
-    &_selected, &:hover {
+    &_selected {
         padding: 70px 0;
         background-color: fusely-color();
         color: fusely-color('neutral', '100');
@@ -69,15 +65,6 @@
                     span {
                         color: fusely-color('neutral', '100');
                     }
-                }
-            }
-
-            &__button {
-                &.fus-button_light {
-                    display: initial;
-                }
-                &.fus-button-outline_primary {
-                    display: none;
                 }
             }
         }
