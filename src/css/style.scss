@@ -538,6 +538,10 @@ $large-container: null;
         }
     }
 
+    &__title {
+        margin-right: 20px;
+    }
+
     &__row-content {
         align-items: start;
 
@@ -715,6 +719,7 @@ $large-container: null;
         &-copyright {
             color: fusely-color('neutral', '300');
             font-size: 12px;
+            margin-left: 20px;
         }
     }
 
