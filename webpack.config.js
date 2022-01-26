@@ -7,7 +7,7 @@ const Handlebars = require("handlebars");
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+  entry: './src',
   devtool: 'source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -20,6 +20,9 @@ module.exports = {
       {
         test: /\.html$/i,
         loader: "html-loader",
+        generator: {
+          filename: '[name][ext]'
+        },
         options: {
           preprocessor: (content, loaderContext) => {
             let result;
@@ -66,7 +69,7 @@ module.exports = {
         generator: {
           filename: 'assets/font/[name][ext]'
         }
-      },
+      }
     ],
   },
 
