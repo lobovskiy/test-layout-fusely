@@ -4,10 +4,11 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const Handlebars = require("handlebars");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+  entry: './src',
   devtool: 'source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -20,6 +21,9 @@ module.exports = {
       {
         test: /\.html$/i,
         loader: "html-loader",
+        generator: {
+          filename: '[name][ext]'
+        },
         options: {
           preprocessor: (content, loaderContext) => {
             let result;
@@ -67,6 +71,14 @@ module.exports = {
           filename: 'assets/font/[name][ext]'
         }
       },
+      // {
+      //   test: /\.html/,
+      //   type: 'asset/resource',
+      //   exclude: [path.resolve(__dirname, 'src/index.html')],
+      //   generator: {
+      //     filename: '[name][ext]'
+      //   }
+      // }
     ],
   },
 
@@ -81,6 +93,11 @@ module.exports = {
       filename: 'index.html',
     }),
     new CleanWebpackPlugin(),
+    // new CopyPlugin({
+    //   patterns: [
+    //     { from: "src/components.html" },
+    //   ],
+    // }),
   ],
 
   
