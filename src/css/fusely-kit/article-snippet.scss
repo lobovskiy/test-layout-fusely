@@ -10,7 +10,7 @@
             width: 100%;
         }
 
-        @media (max-width:991px) {
+        @media (min-width:576px) and (max-width:991px) {
             flex: 0 0 353px;
             margin: 0 27px 0 0;
         }
@@ -33,7 +33,7 @@
         color: fusely-color('neutral', '300');
     }
 
-    @media (max-width:991px) {
+    @media (min-width:576px) and (max-width:991px) {
         flex-direction: row;
         align-items: center;
         max-width: 100%;
