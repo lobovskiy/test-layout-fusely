@@ -349,7 +349,7 @@ $large-container: null;
     }
 
     @media (max-width:575px) {
-        margin-bottom: 100px;
+        margin-bottom: 68px;
     }
 
     &__row {
@@ -358,9 +358,9 @@ $large-container: null;
         align-items: center;
 
         @media (max-width:575px) {
-            justify-content: space-evenly;
+            justify-content: center;
             flex-wrap: wrap;
-            margin: 0 -8px;
+            margin: 0 -22px;
         }
     }
 
@@ -369,7 +369,7 @@ $large-container: null;
         max-width: 110px;
 
         @media (max-width:575px) {
-            margin: 0 8px;
+            margin: 0 22px 32px;
         }
 
         @media (min-width:576px) {
