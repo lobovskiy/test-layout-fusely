@@ -7,11 +7,14 @@ const Handlebars = require("handlebars");
 
 module.exports = {
   mode: 'development',
-  entry: './src',
+  entry: {
+    lib: './src/lib',
+    main: './src',
+  },
   devtool: 'source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: '[name].js',
   },
   watch: false,
 
@@ -20,26 +23,6 @@ module.exports = {
       {
         test: /\.html$/i,
         loader: "html-loader",
-        generator: {
-          filename: '[name][ext]'
-        },
-        options: {
-          preprocessor: (content, loaderContext) => {
-            let result;
-
-            try {
-              result = Handlebars.compile(content)({
-                htmlTitle: "fusely template title"
-              });
-            } catch (error) {
-              loaderContext.emitError(error);
-
-              return content;
-            }
-
-            return result;
-          },
-        },
       },
       {
         test: /\.s[ca]ss$/,
@@ -75,7 +58,7 @@ module.exports = {
 
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'style.css',
+      filename: '[name].css',
     }),
     new HtmlWebpackPlugin({
       title: 'fusely template',
@@ -90,7 +73,9 @@ module.exports = {
   optimization: {
     minimize: true,
     minimizer: [
-      new CssMinimizerPlugin(),
+      new CssMinimizerPlugin({
+        exclude: 'lib.css',
+      }),
     ],
   },
 };
